@@ -36,7 +36,7 @@ img {
     max-width: 100%;
     display: block;
 }
-.contenedor {
+[class$="__contenedor"] {
     max-width: 120rem;
     margin: 0 auto;
     width: 90%;
@@ -66,11 +66,7 @@ img {
         background-size: 110rem;
     }
 }
-.header__contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
-    width: 90%;
-}
+
 @media (min-width: 768px) { 
     .header__barra {
         display: flex;
@@ -158,3 +154,22 @@ img {
         
     }
 }
+
+/*Sección nucleus*/
+.nucleus {
+    margin-top: 3rem;
+}
+
+.nucleus__heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+@media (min-width: 768px) { 
+    .nucleus__grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+     
+}
+
+
