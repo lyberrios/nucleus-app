@@ -377,3 +377,50 @@ img {
         margin: 0;
     }
 }
+
+/* Base: todos empiezan invisibles */
+.flip-right, .fade-down-right, .fade-up, .fade-left {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Flip right: gira desde la izquierda */
+.flip-right {
+    transform: perspective(1000px) rotateY(-90deg);
+}
+
+/* Fade down right: baja y se desliza a la derecha */
+.fade-down-right {
+    transform: translateY(-50px) translateX(50px);
+}
+
+/* Fade up: sube desde abajo */
+.fade-up {
+    transform: translateY(50px);
+}
+
+/* Fade left: entra desde la izquierda */
+.fade-left {
+    transform: translateX(-50px);
+}
+
+/* Cuando son visibles */
+.flip-right.visible {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0);
+}
+
+.fade-down-right.visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
